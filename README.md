@@ -10,7 +10,7 @@ Eg.: if you're extending `_alerts.scss`:
 ```scss
 // src/css/bootstrap/_alerts.scss
 
-import "../relative/path/to/node_modules/bootstrap-sass/loggi/stylesheets/bootstrap/alerts;
+@import "../relative/path/to/node_modules/bootstrap-sass/loggi/stylesheets/bootstrap/alerts;
 
 // and then you add your own styles here
 ```
@@ -19,7 +19,7 @@ if you want to use it out-of-the-box:
 ```scss
 // src/css/main.scss
 
-import "../relative/path/to/node_modules/bootstrap-sass/loggi/stylesheets/bootstrap;
+@import "../relative/path/to/node_modules/bootstrap-sass/loggi/stylesheets/bootstrap;
 
 // and then you add your own styles here
 ```
