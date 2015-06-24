@@ -1,0 +1,36 @@
+// this file contains global styles for a generic loggi dashboard
+
+html, body {
+  // full-screen body
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+body > header {
+  background: $black;
+  font-size: $font-size-small;
+  color: #858585;
+  @include input-height($header-height);
+  padding: 0 20px;
+  .logout {
+    color: $gray-medium-dark;
+  }
+  .brand {
+    // @include shape(logo-logged);
+    @include hide-text;
+    margin: 0;
+    &.loading {
+      // background: loggi-image-url("stable/logo-logged-loading.gif");
+    }
+  }
+  .home & {
+    background: none;
+  }
+  a {
+    cursor: pointer;
+  }
+}
