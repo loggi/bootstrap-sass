@@ -1,4 +1,30 @@
-# Bootstrap for Sass
+# Loggi's Bootstrap Fork
+This repo forks [twbs/bootstrap-sass](https://github.com/twbs/bootstrap-sass) adding our own base styles and components.
+
+## Installation
+`$ npm install @loggi/bootstrap-sass`
+
+## Usage
+Eg.: if you're extending `_alerts.scss`:
+
+```scss
+// src/css/bootstrap/_alerts.scss
+
+import "../relative/path/to/node_modules/bootstrap-sass/loggi/stylesheets/bootstrap/alerts;
+
+// and then you add your own styles here
+```
+
+if you want to use it out-of-the-box:
+```scss
+// src/css/main.scss
+
+import "../relative/path/to/node_modules/bootstrap-sass/loggi/stylesheets/bootstrap;
+
+// and then you add your own styles here
+```
+
+## Bootstrap for Sass
 [![Gem Version](https://badge.fury.io/rb/bootstrap-sass.svg)](http://badge.fury.io/rb/bootstrap-sass)
 [![npm version](https://img.shields.io/npm/v/bootstrap-sass.svg?style=flat)](https://www.npmjs.com/package/bootstrap-sass)
 [![Bower Version](https://badge.fury.io/bo/bootstrap-sass.svg)](http://badge.fury.io/bo/bootstrap-sass)
