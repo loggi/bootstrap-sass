@@ -1,7 +1,7 @@
 {
-  "name": "bootstrap-sass",
+  "name": "@loggi/bootstrap-sass",
   "version": "3.3.5",
-  "description": "bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.",
+  "description": "loggi/bootstrap-sass is a Sass-powered version of Bootstrap. Loggi flavored.",
   "main": "assets/javascripts/bootstrap.js",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap-sass/issues"
+    "url": "https://github.com/loggi/bootstrap-sass/issues"
   },
   "devDependencies": {
     "node-sass": "~2.0",
