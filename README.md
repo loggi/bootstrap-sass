@@ -7,19 +7,27 @@ This repo forks [twbs/bootstrap-sass](https://github.com/twbs/bootstrap-sass) ad
 ## Usage
 Eg.: if you're extending `_alerts.scss`:
 
-```scss
-// src/css/bootstrap/_alerts.scss
-
-@import "../relative/path/to/node_modules/bootstrap-sass/loggi/stylesheets/bootstrap/alerts;
-
-// and then you add your own styles here
-```
-
-if you want to use it out-of-the-box:
+### Out-of-the-box (Complete)
 ```scss
 // src/css/main.scss
 
 @import "../relative/path/to/node_modules/bootstrap-sass/loggi/stylesheets/bootstrap;
+
+// and then you add your own styles here
+```
+
+### Just vars/mixins
+```
+// src/css/main.scss
+@import "loggi/stylesheets/bootstrap/variables";
+@import "loggi/stylesheets/bootstrap/mixins";
+```
+
+### Extending a component
+```scss
+// src/css/bootstrap/_alerts.scss
+
+@import "../relative/path/to/node_modules/bootstrap-sass/loggi/stylesheets/bootstrap/alerts;
 
 // and then you add your own styles here
 ```
