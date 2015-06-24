@@ -1,1 +1,6 @@
 @import "../../../assets/stylesheets/bootstrap/mixins";
+
+@mixin input-height($height) {
+  height: $height;
+  line-height: $height;
+}
