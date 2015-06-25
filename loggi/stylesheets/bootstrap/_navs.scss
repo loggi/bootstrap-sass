@@ -1,1 +1,74 @@
 @import "../../../assets/stylesheets/bootstrap/navs";
+
+.nav-tabs {
+  > li {
+    margin-bottom: 0;
+    border-bottom: $nav-border-dark;
+    border-top: $nav-border-light;
+    .badge {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      @include single-box-shadow(0, 0, 5px, 0, $black);
+      font-family: $font-family-base;
+    }
+    &:first-child {
+      border-top: none;
+    }
+    &:last-child {
+      border-bottom: $nav-border-light;
+      &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        border-top: $nav-border-dark;
+      }
+    }
+    > a {
+      margin-right: 0;
+    }
+    &.active > a {
+      @include text-shadow(none);
+    }
+  }
+}
+
+.tabs-top {
+  margin-bottom: 30px;
+  .btn-default {
+    background-color: $gray-medium-light;
+  }
+  > .nav-tabs {
+    border-bottom: none;
+    li {
+      border: none;
+      &.active a {
+        margin-top: 0;
+        border-bottom: none;
+        color: $black;
+
+        .icon {
+          opacity: 1;
+        }
+      }
+      &:last-child:after {
+        display: none;
+      }
+      a {
+        border: 1px solid $gray;
+        border-bottom: none;
+        color: $gray-85;
+        padding-top: 17px;
+        padding-bottom: 17px;
+
+        .icon {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    // creates .col-tab-1 to .col-tab-12 very similar to
+    // .col-xs-1 -> .col-xs-12 without padding
+    @include loop-grid-columns(12, tab, width);
+  }
+}
