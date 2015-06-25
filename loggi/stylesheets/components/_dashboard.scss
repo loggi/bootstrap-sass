@@ -34,3 +34,38 @@ body > header {
     cursor: pointer;
   }
 }
+
+#mgm-header {
+  $width: 24px;
+  $height: 24px;
+  display: inline;
+
+  .mgm-heart {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: $width; 
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASpJREFUeNpi/P//PwMtAQuIeC+hSHWDBV/cB9NMDDQGA2IBJxB3AvETIP4JxIeA2AlNjRUQbwTih0B8BYhrgZgdmwWMoEhGigNmIN4JxM5o6v4CcRQQr4LSi6BqkQFInzdULc44SMRiOMziBVCXz8RiOAi4Q/XjDaJoPMEJCrpdQMyDR00sIQv0CMQZNwF5XUIWCFCYaPgJWXCbQgtuEbJgLoUWTCdkwQQg3kOm4WuBeCohC34DsS8QTwFiYkvBP0DcAMThsDxAKCf/AOJcaKa5T8Dwq0BsC8SN2AwnVBZtB2JtPPEyC4iNgfgEJYXddyBOAeJCtCArA+J0aFlFldIUFPk1UHY9EHeTVOEQCdqhObmZ5BqNSAAKompS0y4jrevk4VllUhUABBgAwlY9Lv/6TIYAAAAASUVORK5CYII=');
+    background-size: ($width / 3 * 2) ($height / 3 * 2);
+
+    @include single-transition(all, 400ms, cubic-bezier(0.105, 0.960, 0.625, 1.340));
+  }
+
+  a {
+    color: $gray-medium-dark;
+    @include single-transition(color, 400ms);
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+
+      .mgm-heart {
+        height: $height;
+        background-size: $width $height;
+      }
+    }
+  }
+}
