@@ -384,6 +384,8 @@ $container-md:                 $container-desktop !default;
 $container-large-desktop:      (1140px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
+$nav-border-dark: 1px solid #191919;
+$nav-border-light: 1px solid #484848;
 
 
 //== Navbar
@@ -905,3 +907,4 @@ $hr-border:                   $gray-lighter !default;
 
 // Loggi Vars
 $header-height: 45px;
+$main-nav-width: 124px;
