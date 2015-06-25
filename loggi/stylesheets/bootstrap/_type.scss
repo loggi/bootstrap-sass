@@ -1,1 +1,174 @@
 @import "../../../assets/stylesheets/bootstrap/type";
+
+address {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  list-style-position: inside;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: $line-height-computed / 2;
+  margin-bottom: $line-height-computed / 4;
+  line-height: $line-height-computed * 2;
+  &.small {
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  header > &:first-child {
+    // it's safe to assume that every heading
+    // that is also a first-child element doesn't need margin-top
+    margin-top: 0;
+  }
+}
+
+::-moz-selection {
+  color: white;
+  background: $blue;
+}
+
+::selection {
+  color: white;
+  background: $blue;
+}
+
+p, a {
+  > .icon {
+    vertical-align: middle;
+  }
+}
+
+.vertical-middle {
+  vertical-align: middle;
+}
+
+.text-black {
+  color: $black !important;
+}
+
+.text-gray {
+  color: $gray !important;
+}
+
+.text-gray-dark {
+  color: $gray-dark !important;
+}
+
+.text-gray-darker {
+  color: $gray-darker !important;
+}
+
+.text-gray-medium-dark {
+  color: $gray-medium-dark !important;
+}
+
+.text-gray-85 {
+  color: $gray-85 !important;
+}
+
+.text-white {
+  color: $white !important;
+}
+
+.text-blue {
+  color: $blue !important;
+}
+
+.text-green {
+  color: $green !important;
+}
+
+.text-red {
+  color: $red !important;
+}
+
+.text-red-heart {
+  color: $red-heart !important;
+}
+
+.text-red-dark,
+a.text-red:hover {
+  color: $red-dark !important;
+}
+
+.text-purple {
+  color: $purple !important;
+}
+
+.text-yellow {
+  color: $yellow !important;
+}
+
+.text-orange {
+  color: $orange !important;
+}
+
+.text-pink {
+  color: $pink !important;
+}
+
+.font-size-small {
+  font-size: $font-size-small;
+}
+
+.font-size-base {
+  font-size: $font-size-base;
+}
+
+.font-size-menu {
+  font-size: $font-size-menu !important;
+}
+
+.font-size-extra-small {
+  font-size: $font-size-extra-small;
+}
+
+.font-size-super-small {
+  font-size: 10px;
+}
+
+.font-size-ultra-small {
+  font-size: 9px;
+}
+
+.font-weight-bold {
+  font-weight: $bold;
+}
+
+.font-weight-semibold {
+  font-weight: $semibold;
+}
+
+.font-weight-regular {
+  font-weight: 400;
+}
+
+.font-weight-light {
+  font-weight: $light;
+}
+
+.font-weight-thin {
+  font-weight: $thin;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.vertical-divider {
+  letter-spacing: ceil($font-size-small / 3);
+  white-space: pre;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
