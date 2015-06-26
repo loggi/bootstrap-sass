@@ -1,1 +1,7 @@
+#main-content {
+  position: relative;
+  margin-left: $main-nav-width;
+}
+
 @import "header";
+@import "torso";
