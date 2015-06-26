@@ -4,3 +4,13 @@
   height: $height;
   line-height: $height;
 }
+
+@mixin image-block($file, $width: true, $height: true) {
+  background-image: image-url($file);
+  @if $width {
+    width: image-width($file);
+  }
+  @if $height {
+    height: image-height($file);
+  }
+}
