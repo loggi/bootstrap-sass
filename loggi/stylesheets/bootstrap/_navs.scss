@@ -9,7 +9,6 @@
       position: absolute;
       right: 15px;
       top: 15px;
-      @include single-box-shadow(0, 0, 5px, 0, $black);
       font-family: $font-family-base;
     }
     &:first-child {
@@ -26,9 +25,11 @@
     }
     > a {
       margin-right: 0;
-    }
-    &.active > a {
-      @include text-shadow(none);
+
+      &:hover, &:focus {
+        background-color: #282828;
+        border-color: transparent;
+      }
     }
   }
 }
