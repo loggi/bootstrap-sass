@@ -1,0 +1,17 @@
+@import "../../../assets/stylesheets/bootstrap/tables";
+
+table.table-sm {
+  font-size: 0.8em;
+}
+
+table.table-loggi {
+  thead th {
+    text-align: center;
+  }
+  th, td {
+    vertical-align: middle !important;
+    &.money {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../../assets/stylesheets/bootstrap/badges";
+
+.badge {
+  color: $blue;
+  background-color: $white;
+  width: $line-height-computed;
+  height: $line-height-computed;
+  @include border-radius($line-height-computed);
+  padding: 0;
+  line-height: $line-height-computed;
+  &.invert-colors {
+    color: $white;
+    background-color: $blue;
+  }
+  &.sm {
+    font-size: $font-size-extra-small - 1px;
+    width: $line-height-computed - 4px;
+    height: $line-height-computed - 4px;
+    line-height: $line-height-computed - 4px;
+    @include border-radius($line-height-computed - 4px);
+  }
+}
+
+.nav-tabs > li .badge {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+a.share-a-ride > .badge {
+  position: absolute;
+  right: -6px;
+  top: -6px;
+}

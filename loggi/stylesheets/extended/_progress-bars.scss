@@ -1,0 +1,11 @@
+@import "../../../assets/stylesheets/bootstrap/progress-bars";
+
+.progress {
+  background-color: $gray;
+  height: 9px;
+  @include border-radius(0);
+}
+
+.progress-bar {
+  border-top: 1px solid lighten($blue, 20%);
+}

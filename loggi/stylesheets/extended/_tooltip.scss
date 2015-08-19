@@ -1,0 +1,49 @@
+@import "../../../assets/stylesheets/bootstrap/tooltip";
+
+.tooltip {
+  &.right .tooltip-inner {
+    text-align: left;
+    padding: $padding-small-vertical * 2 $padding-small-horizontal * 2;
+  }
+  h5 {
+    color: $blue;
+    white-space: nowrap;
+    i.icon {
+      vertical-align: middle;
+    }
+  }
+}
+
+.tooltip.error {
+  $color: $red;
+  font-size: $font-size-base;
+  .tooltip-inner {
+    background: $color;
+  }
+  &.top {
+    margin-top: -13px;
+    .tooltip-arrow {
+      border-top-color: $color;
+    }
+  }
+  &.bottom {
+    margin-top: -13px;
+    margin-left: 10px;
+    .tooltip-arrow {
+      border-bottom-color: $color;
+      left: 15%;
+    }
+  }
+  &.left {
+    margin-left: -13px;
+    .tooltip-arrow {
+      border-left-color: $color;
+    }
+  }
+  &.right {
+    margin-right: -13px;
+    .tooltip-arrow {
+      border-right-color: $color;
+    }
+  }
+}

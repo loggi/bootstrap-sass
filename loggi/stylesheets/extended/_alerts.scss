@@ -1,0 +1,24 @@
+@import "../../../assets/stylesheets/bootstrap/alerts";
+
+.alert-sm {
+  padding: $alert-padding / 2;
+  font-size: $font-size-extra-small;
+}
+
+.alert-error {
+  @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+}
+
+.alert.fade {
+  @include single-transition(opacity, 1s);
+  opacity: 0;
+  filter: alpha(opacity = 0);
+}
+
+.alert-warning a {
+  color: $alert-warning-text;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}

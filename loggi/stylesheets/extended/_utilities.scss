@@ -1,0 +1,55 @@
+@import "../../../assets/stylesheets/bootstrap/utilities";
+
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: $input-height-base / 2;
+  @include box-sizing(border-box);
+}
+
+.btn.input-block-level {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.vertical-line,
+.vertical-line-right {
+  position: absolute;
+  width: 1px;
+  background: $gray-medium-dark;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+}
+
+.vertical-line {
+  left: 9px;
+}
+
+.vertical-line-right {
+  right: 9px;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}
+
+$colors: "blue" $blue, "green" $green, "red" $red, "yellow" $yellow, "orange" $orange, "pink" $pink, "purple" $purple;
+
+@each $color in $colors {
+  .bg-#{nth($color, 1)} {
+    background-color: nth($color, 2);
+    color: $white;
+  }
+  .border-#{nth($color, 1)} {
+    border-color: nth($color, 2);
+  }
+}
+
+.truncate {
+  @include text-overflow;
+}

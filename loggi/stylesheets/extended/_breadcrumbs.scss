@@ -1,0 +1,10 @@
+@import "../../../assets/stylesheets/bootstrap/breadcrumbs";
+
+.breadcrumb {
+  font-size: $font-size-extra-small;
+  > li {
+    + li:before {
+      padding: 0 3px;
+    }
+  }
+}

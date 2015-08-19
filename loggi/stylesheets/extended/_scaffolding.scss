@@ -1,0 +1,20 @@
+@import "../../../assets/stylesheets/bootstrap/scaffolding";
+
+a, button {
+  &.disabled, &[disabled], fieldset[disabled] & {
+    cursor: not-allowed !important;
+  }
+}
+
+.trim-border-collumns {
+  .col {
+    border-left: 1px solid;
+    &:first-child {
+      border-left: 0px;
+    }
+  }
+}
+
+body {
+  background: transparent;
+}

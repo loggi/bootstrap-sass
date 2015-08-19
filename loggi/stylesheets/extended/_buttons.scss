@@ -1,0 +1,40 @@
+@import "../../../assets/stylesheets/bootstrap/buttons";
+
+.btn {
+  border-width: 0;
+  font-weight: normal;
+  // buttons dont have border, but we want them to gave same height (w/o border) as regular inputs
+  $padding-vertical: 0;
+  $padding-horizontal: $padding-base-horizontal * 2;
+  $font-size: $font-size-extra-small;
+  $line-height: $input-height-base - 2px;
+  // border diff
+  @include button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius-base);
+  // we really need this? i thing it's really ugly
+  text-transform: uppercase;
+  @include single-transition(background-color, 0.5s);
+
+  &.btn-block {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.btn.btn-multiline {
+  white-space: normal;
+  text-transform: none;
+}
+
+.btn-xs {
+  // buttons dont have border, but we want them to gave same height (w/o border) as regular inputs
+  $padding-vertical: 0;
+  $padding-horizontal: $padding-extra-small-horizontal * 2;
+  $font-size: $font-size-extra-small - 1px;
+  $line-height: $input-height-base - 8px;
+  // border diff
+  @include button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius-small);
+}
+
+.btn.loading {
+  background-repeat: repeat;
+}
