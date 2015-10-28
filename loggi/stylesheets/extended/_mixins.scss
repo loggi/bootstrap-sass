@@ -100,3 +100,28 @@
     background-size: $width $height;
   }
 }
+
+
+// absolute and fixed mixins
+@mixin position($t,$l,$b,$r){
+  @if $t!= false {
+    top: $t;
+  }
+  @if $l!= false {
+    left: $l;
+  }
+  @if $b!= false {
+    bottom: $b;
+  }
+  @if $r!= false {
+    right: $r;
+  }
+}
+@mixin absolute($top:false,$left:false,$bottom:false,$right:false) {
+  position: absolute;
+  @include position($top,$left,$bottom,$right);
+}
+@mixin fixed($top:false,$left:false,$bottom:false,$right:false) {
+  position: fixed;
+  @include position($top,$left,$bottom,$right);
+}
