@@ -125,3 +125,63 @@
   position: fixed;
   @include position($top,$left,$bottom,$right);
 }
+
+// Chevron (tirangle/arrow) mixin
+@mixin chevron($width, $height, $skew, $color, $direction: 'up') {
+  position: relative;
+  width: $width;
+  height: $height;
+
+  @if $direction == 'up' {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  } @else if $direction == 'down' {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  } @else if $direction == 'left' {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  } @else if $direction == 'right' {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  } @else {
+    @warn "Direction must be one of `up`, `right`, `down` or `left`; currently `#{$direction}`.";
+  }
+
+  &:before, &:after {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: $color;
+    content: '';
+  }
+  &:before {
+    left: 0;
+    -webkit-transform: skew(0deg, $skew);
+    -moz-transform: skew(0deg, $skew);
+    -ms-transform: skew(0deg, $skew);
+    -o-transform: skew(0deg, $skew);
+    transform: skew(0deg, $skew);
+  }
+  &:after {
+    right: 0;
+    -webkit-transform: skew(0deg, -$skew);
+    -moz-transform: skew(0deg, -$skew);
+    -ms-transform: skew(0deg, -$skew);
+    -o-transform: skew(0deg, -$skew);
+    transform: skew(0deg, -$skew);
+  }
+}
