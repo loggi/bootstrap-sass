@@ -31,27 +31,27 @@
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-    width: $width; 
+    width: 18px;
     height: 18px;
+    margin: 0 3px 0;
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASpJREFUeNpi/P//PwMtAQuIeC+hSHWDBV/cB9NMDDQGA2IBJxB3AvETIP4JxIeA2AlNjRUQbwTih0B8BYhrgZgdmwWMoEhGigNmIN4JxM5o6v4CcRQQr4LSi6BqkQFInzdULc44SMRiOMziBVCXz8RiOAi4Q/XjDaJoPMEJCrpdQMyDR00sIQv0CMQZNwF5XUIWCFCYaPgJWXCbQgtuEbJgLoUWTCdkwQQg3kOm4WuBeCohC34DsS8QTwFiYkvBP0DcAMThsDxAKCf/AOJcaKa5T8Dwq0BsC8SN2AwnVBZtB2JtPPEyC4iNgfgEJYXddyBOAeJCtCArA+J0aFlFldIUFPk1UHY9EHeTVOEQCdqhObmZ5BqNSAAKompS0y4jrevk4VllUhUABBgAwlY9Lv/6TIYAAAAASUVORK5CYII=');
-    background-size: ($width / 3 * 2) ($height / 3 * 2);
+    background-size: cover;
 
-    @include single-transition(all, 400ms, cubic-bezier(0.105, 0.960, 0.625, 1.340));
+    transition: transform 0.4s ease-out;
   }
 
   a {
     color: $gray-medium-dark;
-    @include single-transition(color, 400ms);
+    transition: color 0.4s;
 
     &:hover {
       color: $white;
       text-decoration: none;
 
       .mgm-heart {
-        height: $height;
-        background-size: $width $height;
+        transform: scale(1.5);
       }
     }
   }
