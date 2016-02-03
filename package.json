@@ -1,6 +1,6 @@
 {
   "name": "@loggi/bootstrap-sass",
-  "version": "3.4.2",
+  "version": "3.4.3",
   "description": "loggi/bootstrap-sass is a Sass-powered version of Bootstrap. Loggi flavored.",
   "main": "assets/javascripts/bootstrap.js",
   "repository": {
