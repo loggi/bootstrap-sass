@@ -136,10 +136,6 @@
 
 @mixin parallelogram($width, $height, $skew, $color) {
   @include rectangle($width, $height, $color);
-  -webkit-transform: skew($skew);
-  -moz-transform: skew($skew);
-  -ms-transform: skew($skew);
-  -o-transform: skew($skew);
   transform: skew($skew);
 }
 
@@ -149,21 +145,17 @@
 
 @mixin circle($size, $color) {
   @include square($size, $color);
-  -webkit-border-radius: $size / 2;
-  -moz-border-radius: $size / 2;
   border-radius: $size / 2;
 }
 
 @mixin oval($width, $height, $color) {
   width: $width;
   height: $height;
-  -webkit-border-radius: #{$width} / #{$height};
-  -moz-border-radius: #{$width} / #{$height};
   border-radius: #{$width} / #{$height};
   background: $color;
 }
 
-@mixin triangle($size, $color, $direction: 'up') {
+@mixin triangle($direction, $size, $color) {
   width: 0;
   height: 0;
 
@@ -186,7 +178,7 @@
   }
 }
 
-@mixin corner-triangle($size, $color, $corner: 'top-left') {
+@mixin corner-triangle($corner, $size, $color) {
   width: 0;
   height: 0;
 
@@ -213,31 +205,10 @@
   border-left: $width / 2 solid transparent;
 }
 
-@mixin chevron($width, $height, $skew, $color, $direction: 'up') {
+@mixin chevron($direction, $width, $height, $skew, $color) {
   position: relative;
   width: $width;
   height: $height;
-
-  @if $direction == 'down' {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-  } @else if $direction == 'left' {
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  } @else if $direction == 'right' {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-
   &:before, &:after {
     position: absolute;
     top: 0;
@@ -248,18 +219,10 @@
   }
   &:before {
     left: 0;
-    -webkit-transform: skew(0deg, $skew);
-    -moz-transform: skew(0deg, $skew);
-    -ms-transform: skew(0deg, $skew);
-    -o-transform: skew(0deg, $skew);
     transform: skew(0deg, $skew);
   }
   &:after {
     right: 0;
-    -webkit-transform: skew(0deg, -$skew);
-    -moz-transform: skew(0deg, -$skew);
-    -ms-transform: skew(0deg, -$skew);
-    -o-transform: skew(0deg, -$skew);
     transform: skew(0deg, -$skew);
   }
 }
